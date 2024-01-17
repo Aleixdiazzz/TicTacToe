@@ -53,9 +53,8 @@ function setTile(){
         return;
     }
 
-    let coordinates = this.id.split("-");
-    let r = parseInt(coordinates[0]);
-    let c = parseInt(coordinates[1]);
+    let r = this.id[0];
+    let c = this.id[2];
 
     if (board[r][c] != ''){
         return;

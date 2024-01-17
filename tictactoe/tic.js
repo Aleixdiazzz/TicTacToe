@@ -4,25 +4,30 @@ var playerx = "x";
 var currPlayer = playerx;
 var gameOver = false;
 
+//Calling the setGame function when the page is loaded
 window.onload = function(){
     setGame();
 }
+
+//Function to print wether winner is x or o
 function printWinner(){
     if (currPlayer == playero){
-        document.getElementById("winnero").innerHTML = "Player O wins!!";
+        document.getElementById("winnero").innerHTML = "Player o wins!!";
         return;
     }
     if (currPlayer == playerx){
-        document.getElementById("winnerx").innerHTML = "Player X wins!!";
+        document.getElementById("winnerx").innerHTML = "Player x wins!!";
         return;
     }
 }
+
+//Function in case of tie, prints out the result.
 function tie(){
     document.getElementById("winnerx").innerHTML = "Tie... :/";
         return;
 }
 
-
+//function to populate the board and declare the matrix we'll be checking against
 function setGame(){
     board = [
         ['', '', ''],
@@ -41,6 +46,8 @@ function setGame(){
     }
 }
 
+
+//function to write result on matrix, check if the play won the match and change the player.
 function setTile(){
     if (gameOver == true){
         return;
@@ -69,6 +76,8 @@ function setTile(){
 
 }
 
+
+//Function to check wether there is a combination of three of the same player.
 function checkWinner() {
     for (let r = 0; r < 3; r++) {
         if (board[r][0] == board[r][1] && board[r][1] == board[r][2] && board[r][0] != '') {   

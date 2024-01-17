@@ -1,0 +1,59 @@
+@font-face {
+    font-family: PublicPixel;
+    src: url(./font/public-pixel-font/PublicPixel-z84yD.ttf);
+}
+html{
+    font-family: PublicPixel;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.board{
+    margin-top: 10%;
+    background-color: darkgray;
+    height: 450px;
+    width: 450px;
+    border-style: groove;
+    border-width: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.tile{
+    width:  148px;
+    height: 148px;
+    border: 1px groove whitesmoke;
+
+    font-size: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.reset{
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: lightgray;
+}
